@@ -1,3 +1,4 @@
+/*
 const board = [
 	["A", "B", "C"],
 	["D", "E", "F"],
@@ -41,3 +42,4 @@ console.log("Path:" + moves.join(" → ") + `\n`);
 // Output: Path: A → B → C → F → E
 console.log("Total Moves (Start from 'A'):", moves.length - 1);
 // Output: Total Moves (Start from 'A'): 4
+*/
