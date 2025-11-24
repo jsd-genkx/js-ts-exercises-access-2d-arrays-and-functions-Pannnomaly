@@ -2,6 +2,7 @@ const board = [
 	["A", "B", "C"],
 	["D", "E", "F"],
 	["G", "H", "I"],
+	["J", "K", "L"],
 ];
 
 const moves = [];
@@ -14,9 +15,9 @@ moves.push(board[row][col]); // A
 // Define movement functions
 function moveRight()
 {
-	if (col === 2)
+	if (col === board[row].length - 1)
 	{
-		console.log(`${col} is out of length`);
+		console.log(`col: ${col + 1} is out of length`);
 		return;
 	}
 
@@ -28,7 +29,7 @@ function moveLeft()
 {
 	if (col === 0)
 	{
-		console.log(`${col} is out of length`);
+		console.log(`col: ${col - 1} is out of length`);
 		return;
 	}
 
@@ -40,7 +41,7 @@ function moveUp()
 {
 	if (row === 0)
 	{
-		console.log(`${row} is out of length`);
+		console.log(`row: ${row - 1} is out of length`);
 		return;
 	}
 
@@ -50,9 +51,9 @@ function moveUp()
 
 function moveDown()
 {
-	if (row === 2)
+	if (row === board[col].length - 1)
 	{
-		console.log(`${row} is out of length`);
+		console.log(`row: ${row + 1} is out of length`);
 		return;
 	}
 
@@ -60,22 +61,30 @@ function moveDown()
 	moves.push(board[row][col]);
 }
 
+// row
+// console.log(board.length);
+// col
+// console.log(board[0].length);
+
 // Call the movement functions
 // moveRight(); // Move from A to B
 // moveRight(); // Move from B to C
 moveRight();
 moveRight();
 moveRight();
+moveRight();
+moveDown();
 moveDown();
 moveDown();
 moveDown();
 moveUp();
 moveUp();
 moveUp();
+moveUp();
 moveLeft();
 moveLeft();
 moveLeft();
-
+moveLeft();
 
 // moveDown(); // Move from C to F
 // moveLeft(); // Move from F to E
